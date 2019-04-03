@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Julia Gankina](https://up.htmlacademy.ru/adaptive/16/user/936943).
-* Наставник: `Неизвестно`.
+* Наставник: Владислав Балабанович (https://htmlacademy.ru/profile/id6394).
 
 ---
 
