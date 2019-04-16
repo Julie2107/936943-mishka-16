@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Магазин товаров ручной работы">
       </a>
       <nav class="main-nav">
@@ -16,15 +17,15 @@
             <a href="shop.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-nav__search site-list">
           <li class="site-list__item">
             <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
-              <label for="search">
-              <span class="icon-search"></span>
-              <input type="search" id="search" placeholder="Поиск по сайту">
+              <label class="site-list__search" for="search">
+                <span class="icon-search"></span>
+                <input type="search" id="search" placeholder="Поиск по сайту">
               </label>
             </form>
           </li>
@@ -38,8 +39,8 @@
       </nav>
     </header>
     <main>
-      <div class="main-header">
-        <h1 class="main-header__title main-header__title--index">Милые штуки ручной работы</h1>
+      <div class="main-header main-header--index">
+        <h1 class="main-header__title ">Милые штуки ручной работы для дома</h1>
       </div>
       <ul class="categories">
         <li class="categories__item categories__item--interior">
@@ -55,16 +56,16 @@
         <p class="top-item__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="top-item__table">
           <tr>
-            <td class="top-item__table__cell">Цвет:</td>
-            <td class="top-item__table__cell">«Тиффани»/серый</td>
+            <td">Цвет:</td>
+            <td>«Тиффани»/серый</td>
           </tr>
           <tr>
-            <td class="top-item__table__cell">Диаметр:</td>
+            <td>Диаметр:</td>
             <td class="top-item__table__cell">25 см</td>
           </tr>
           <tr>
-            <td class="top-item__table__cell">Высота:</td>
-            <td class="top-item__table__cell">15 см</td>
+            <td>Высота:</td>
+            <td>15 см</td>
           </tr>
         </table>
         <img class="top-item__image" src="http://placehold.it/260x315" alt="вязаные корзинки" width="260" height="315">
@@ -95,10 +96,10 @@
         </ul>
       </section>
       <section class="comments">
-        <div class="comments-wrapper slider">
+        <div class="comments__wrapper slider">
           <h2 class="comments__header section-header">Отзывы</h2>
-          <div class="comments-list slider__list">
-            <blockquote class="comment-box slider__item">
+          <div class="comments__list slider__list">
+            <blockquote class="comments__box slider__item">
               <p class="comments__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <span class="comments__name">Анастасия Красильникова</span>
               <cite class="comments__username">@misssssiskras</cite>
@@ -112,16 +113,18 @@
         <button class="comments__button site-button" type="button" name="comment-us">написать</button>
       </section>
       <section class="contacts">
-        <h2 class="contacts__header section-header section-header--contacts-header">Контакты</h2>
-        <div class="contacts__text main-text">
-          <span class="contacts__email main-text">e-mail:</span>
-          <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          <span class="contacts__adress main-text">адрес:</span>
-          <address class="contacts__adress main-text">
-            г. Санкт-Петербург,<br>
-            ул. Большая Конюшенная,<br>
-            д. 19/8, офис 101
-          </address>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__header section-header section-header--contacts-header">Контакты</h2>
+          <div class="contacts__text">
+            <span class="contacts__email main-text">e-mail:</span>
+            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            <span class="contacts__adress">адрес:</span>
+            <address class="contacts__adress">
+              г. Санкт-Петербург,<br>
+              ул. Большая Конюшенная,<br>
+              д. 19/8, офис 101
+            </address>
+          </div>
         </div>
         <img class="contacts__map" src="http://placehold.it/322x457" alt="наш адрес на карте" width="322" height="457">
         <button class="contacts__button site-button" type="button" name="write-us">напишите нам</button>
