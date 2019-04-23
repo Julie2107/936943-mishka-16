@@ -3,16 +3,35 @@
   min-height: 177px;
   background-color: @grey;
   text-align: center;
-  .section-align(30px, 30px);
 }
 
 .main-header__title {
+  .title-align(93px, 193px);
   .font(27px, 700, 30px);
+  width: 244px;
+  text-align: center;
+  margin: auto;
 }
 
-.main-header--index {
+/*.main-header--index {
   background-image: url("../../img/hero-mobile@1x.jpg");
-  background-size: 320px 283px;
+  background-size: 575px 373px;
   background-repeat: no-repeat;
   background-position: center;
+}*/
+
+@media (min-width: @tablet-width) {
+  .main-header__title {
+    .title-align(161px, 490px);
+    width: 500px;
+    .font(43px, 700, 50px)
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header__title {
+    width: 620px;
+    .font(53px, 700, 57px)
+  }
+
 }

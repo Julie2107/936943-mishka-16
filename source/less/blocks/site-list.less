@@ -3,23 +3,38 @@
 }
 
 .site-list__item {
-  .font(17px, 700, 24px);
-  .section-align(76px, 0);
-  .title-align();
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 }
 
 .site-list__item a {
+  .font(17px, 700, 24px);
+  width: 100%;
+  display: block;
   .link-style();
+  .section-align(76px, 0);
+  .title-align();
 }
 
 .site-list__item input {
   border: none;
   background-color: white;
+  display: block;
+  .link-style();
+  .section-align(76px, 0);
+  .title-align();
+
 }
 
-.site-list__item input[placeholder] {
+.site-list__item input::placeholder {
   .font(17px, 700, 24px);
   color: black;
   opacity: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item a {
+    .font(15px, 700, 24px);
+    .title-align(25px, 25px);
+    .section-align(0, 0);
+  }
 }

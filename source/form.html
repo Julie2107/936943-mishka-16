@@ -7,10 +7,10 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Магазин товаров ручной работы">
-      </a>
       <nav class="main-nav">
+        <a class="main-nav__logo" href="index.html">
+          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Магазин товаров ручной работы">
+        </a>
         <button class="main-nav__toggle" type="button" name="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -20,24 +20,29 @@
             <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__search site-list">
-          <li class="site-list__item">
+        <div class="main-nav__user-options">
+          <div class="main-nav__search site-list__item">
             <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
-              <label for="search">
-
-              <span class="icon-search"></span>
-              <input type="search" id="search" placeholder="Поиск по сайту">
-
+              <label class="site-list__search" for="search">
+                <span class="icon-search"></span>
+                <input type="search" id="search" placeholder="Поиск по сайту">
               </label>
             </form>
-          </li>
-        </ul>
-        <ul class="main-nav__user site-list">
-          <li class="site-list__item">
+          </div>
+          <div class="main-nav__user site-list__item">
             <span class="icon-cart"></span>
             <a href="cart.html">Корзина: пока пуста</a>
+          </div>
+        </div>
+        <ul class="main-nav__sale site-list">
+          <li class="site-list__item">
+            <a href="cart.html">Новые поступления</a>
+          </li>
+          <li class="site-list__item">
+            <a href="cart.html">Распродажа</a>
           </li>
         </ul>
+        <p class="main-nav__delivery">Бесплатная доставка по России</p>
       </nav>
     </header>
     <main>
@@ -134,22 +139,25 @@
       </form>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--insta" href="instagram.com">Мы в Инстаграмме</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="facebook.com">Мы в Фейсбуке</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--tweet" href="twitter.com">Мы в Твиттере</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="htmlacademy.ru"> <img src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34"> </a>
+      <div class="page-footer__container">
+        <a class="page-footer__logo" href="index.html"> <img src="http://placehold.it/102x34" alt=""> </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--insta" href="instagram.com">Мы в Инстаграмме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="facebook.com">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--tweet" href="twitter.com">Мы в Твиттере</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="htmlacademy.ru"> <img src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34"> </a>
+        </div>
       </div>
     </footer>
   </body>

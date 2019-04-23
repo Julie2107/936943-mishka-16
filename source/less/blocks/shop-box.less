@@ -1,10 +1,27 @@
 .shop-box {
   margin-bottom: 30px;
   border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
 }
 
 .shop-box__image {
   background-color: @grey;
+  margin-bottom: 20px;
+}
+
+.shop-box__content {
+  width: 205px;
+  .center-block();
+  .title-align(5px, 5px);
+}
+
+.shop-box__shop {
+  width: 205px;
+  .center-block();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .shop-box__name {
@@ -14,10 +31,78 @@
 .shop-box__desc {
   .font(13px, 400, 30px);
   color: @text;
-  .title-align();
-  .section-align();
 }
 
 .shop-box__price {
   .font(15px, 700, 24px);
+}
+
+@media (min-width: @tablet-width) {
+  .shop-box {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    max-height: 335px;
+  }
+
+  .shop-box__image {
+    width: 334px;
+    height: 334px;
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+
+  .shop-box__name {
+    .font(20px, 700, 24px);
+    display: block;
+  }
+
+  .shop-box__desc {
+    .font(15px, 400, 30px);
+    width: 590px;
+    .center-block();
+  }
+
+  .shop-box__price {
+    .font(17px, 700, 24px);
+  }
+
+  .shop-box--video {
+    max-height: 750px;
+    width: 670px;
+  }
+
+  .shop-box__name--video {
+    width: 590px;
+    .center-block();
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .shop-box {
+    width: 316px;
+    max-height: 760px;
+    border: 1px solid red;
+
+  }
+
+  .shop-box__image {
+    width: 316px;
+    height: 462px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .shop-box--video {
+    max-height: 750px;
+    width: 670px;
+  }
+
+  .shop-box__name--video {
+    width: 1050px;
+    .center-block();
+  }
+
 }
