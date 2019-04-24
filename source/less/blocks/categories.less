@@ -2,13 +2,12 @@
   .list-style();
 }
 
-.categories__item {
-  .section-align(30px, 185px);
-  .title-align();
-}
-
 .categories__item a {
+  display: block;
+  width: 110px;
   .link-style();
+  .title-align();
+  .section-align(30px, 180px);
   .font(19px, 700, 24px);
   color: white;
 }
@@ -19,4 +18,27 @@
 
 .categories__item--toys {
   background-color: @mint-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    display: flex;
+    width: 670px;
+    .center-block();
+  }
+
+  .categories__item {
+    width: 50%;
+  }
+
+  .categories__item a {
+    .font(20px, 700, 30px);
+    color: white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    width: 1050px;
+  }
 }

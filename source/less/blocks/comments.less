@@ -1,5 +1,6 @@
 .comments {
-  .section-align();
+  width: 260px;
+  .center-block();
 }
 
 .comments__box {
@@ -20,4 +21,47 @@
   .font(17px, 400, 30px);
   color: @text;
   font-style: normal;
+}
+
+.comments__button {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .comments {
+    width: 100%;
+  }
+
+  .comments__centered {
+    width: 670px;
+    .center-block();
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .comments__content {
+    order: 1;
+  }
+
+  .comments__button {
+    width: 175px;
+  }
+
+  .comments__text {
+    .font(17px, 400, 30px);
+  }
+
+  .comments__name {
+    display: block;
+    .font(18px, 700, 24px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments__centered {
+    width: 875px;
+    .section-align(175px, 0);
+  }
 }
