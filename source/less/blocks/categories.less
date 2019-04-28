@@ -1,23 +1,33 @@
 .categories {
   .list-style();
+  width: 320px;
+  .center-block();
 }
 
 .categories__item a {
   display: block;
-  width: 110px;
   .link-style();
   .title-align();
-  .section-align(30px, 180px);
+  .section-align();
   .font(19px, 700, 24px);
   color: white;
+  cursor: pointer;
 }
 
 .categories__item--interior {
   background-color: @mint;
+  /*background-image: url("../../img/icon-interior.svg");
+  background-position: 244px 23px;
+  background-repeat: no-repeat;
+  background-size: 40px 62px;*/
 }
 
 .categories__item--toys {
   background-color: @mint-dark;
+  /*background-image: url("../../img/icon-toy.svg");
+  background-position: 233px 23px;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;*/
 }
 
 @media (min-width: @tablet-width) {

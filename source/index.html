@@ -9,38 +9,44 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav container main-nav--closed main-nav--nojs">
         <a class="main-nav__logo" href="index.html">
           <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Магазин товаров ручной работы">
         </a>
-        <button class="main-nav__toggle" type="button" name="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+        <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list site-list site-list">
+          <li class="site-list__item site-list__item--small">
             <a href="shop.html">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--small">
             <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <div class="main-nav__user-options">
+        <div class="main-nav__user-options site-list">
           <div class="main-nav__search site-list__item">
-            <form class="search-form" action="https//echo.htmlacademy.ru" method="get">
+            <form class="site-list__search-form" action="https//echo.htmlacademy.ru" method="get">
               <label class="site-list__search" for="search">
-                <span class="icon-search"></span>
+                <svg class="site-list__search-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                  <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                </svg>
                 <input type="search" id="search" placeholder="Поиск по сайту">
               </label>
             </form>
           </div>
           <div class="main-nav__user site-list__item">
-            <span class="icon-cart"></span>
-            <a href="cart.html">Корзина: пока пуста</a>
+            <a class="site-list__cart" href="cart.html">
+              <svg class="site-list__cart-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="18px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+              <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+              </svg>
+              Корзина: пока пуста
+            </a>
           </div>
         </div>
         <ul class="main-nav__sale site-list">
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--add">
             <a href="cart.html">Новые поступления</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--add">
             <a href="cart.html">Распродажа</a>
           </li>
         </ul>
@@ -53,15 +59,15 @@
       </div>
       <ul class="categories">
         <li class="categories__item categories__item--interior">
-          <a href="catalogue-interior.html">Предметы интерьера</a>
+          <a href="catalogue-interior.html">Предметы<br> интерьера</a>
         </li>
         <li class="categories__item categories__item--toys">
-          <a href="catalogue-toys.html">Детские игрушки</a>
+          <a href="catalogue-toys.html">Детские<br> игрушки</a>
         </li>
       </ul>
-      <section class="top-item">
+      <section class="top-item container">
         <div class="top-item__header">
-          <h2 class="top-item__header section-header">Вязаные корзинки</h2>
+          <h2 class="top-item__title section-header">Вязаные корзинки</h2>
           <b class="top-item__subheader">товар недели</b>
         </div>
         <div class="top-item__content">
@@ -93,31 +99,38 @@
           </div>
         </div>
       </section>
-      <section class="benefits">
+      <div class="divider divider--top-item">
+
+      </div>
+      <section class="benefits container">
         <h2 class="benefits__header section-header"> Коротко о нас:</h2>
-        <ul class="benefits__list">
-          <li class="benefits__item benefits__item--eco">
-            Экологически чистые материалы
-          </li>
-          <li class="benefits__item benefits__item--ska">
-            Скандинавский стиль по российской цене
-          </li>
-          <li class="benefits__item benefits__item--likes">
-            Увеличивает лайки на фотографиях
-          </li>
-          <li class="benefits__item benefits__item--love">
-            Связано вручную с любовью и умилением
-          </li>
-          <li class="benefits__item benefits__item--patriot">
-            Поддержка отечественного производителя
-          </li>
-          <li class="benefits__item benefits__item--present">
-            Поставляется в подарочной упаковке
-          </li>
-        </ul>
+        <div class="benefits__container">
+          <ul class="benefits__list">
+            <li class="benefits__item benefits__item--eco">
+              Экологически чистые материалы
+            </li>
+            <li class="benefits__item benefits__item--ska">
+              Скандинавский стиль по российской цене
+            </li>
+            <li class="benefits__item benefits__item--likes">
+              Увеличивает лайки на фотографиях
+            </li>
+          </ul>
+          <ul class="benefits__list">
+            <li class="benefits__item benefits__item--love">
+              Связано вручную с любовью и умилением
+            </li>
+            <li class="benefits__item benefits__item--patriot">
+              Поддержка отечественного производителя
+            </li>
+            <li class="benefits__item benefits__item--present">
+              Поставляется в подарочной упаковке
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="comments">
-        <div class="comments__centered">
+        <div class="comments__centered container">
           <h2 class="comments__header section-header">Отзывы</h2>
           <div class="comments__content slider">
             <div class="comments__list slider__list">
@@ -135,26 +148,33 @@
           <button class="comments__button site-button" type="button" name="comment-us">написать</button>
         </div>
       </section>
+      <div class="divider divider--top-item">
+
+      </div>
       <section class="contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper container">
           <h2 class="contacts__header section-header section-header--contacts-header">Контакты</h2>
-          <div class="contacts__text">
-            <span class="contacts__email main-text">e-mail:
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
-            <span class="contacts__adress">адрес:
-            <address class="contacts__adress">
-              г. Санкт-Петербург,<br>
-              ул. Большая Конюшенная,<br>
-              д. 19/8, офис 101
-            </address></span>
-          </div>
+          <table class="contacts__text">
+            <tr class="contacts__email">
+              <td class="contacts__cell-title">e-mail:</td>
+              <td><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+            </tr>
+            <tr class="contacts__adress">
+              <td class="contacts__cell-title">адрес:</td>
+              <td><address class="contacts__adress">
+                г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,<br>
+                д. 19/8, офис 101
+              </address></td>
+            </tr>
+          </table>
         </div>
         <img class="contacts__map" src="http://placehold.it/322x457" alt="наш адрес на карте" width="322" height="457">
         <button class="contacts__button site-button" type="button" name="write-us">напишите нам</button>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__container">
+      <div class="page-footer__container container">
         <a class="page-footer__logo" href="index.html"> <img src="http://placehold.it/102x34" alt=""> </a>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -175,5 +195,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

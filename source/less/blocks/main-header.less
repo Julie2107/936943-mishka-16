@@ -1,16 +1,19 @@
 .main-header {
-  display: block;
   min-height: 177px;
   background-color: @grey;
   text-align: center;
 }
 
 .main-header__title {
-  .title-align(93px, 193px);
+  .title-align(75px, 75px);
   .font(27px, 700, 30px);
   width: 244px;
   text-align: center;
   margin: auto;
+}
+
+.main-header__title--index {
+  .title-align(76px, 120px);
 }
 
 /*.main-header--index {
@@ -22,9 +25,13 @@
 
 @media (min-width: @tablet-width) {
   .main-header__title {
-    .title-align(161px, 490px);
+    .title-align(100px, 65px);
     width: 500px;
     .font(43px, 700, 50px);
+  }
+
+  .main-header__title--index {
+    .title-align(160px, 370px);
   }
 }
 
@@ -32,5 +39,10 @@
   .main-header__title {
     width: 620px;
     .font(53px, 700, 57px);
+    .title-align(100px, 80px);
+  }
+
+  .main-header__title--index {
+    .title-align(160px, 350px);
   }
 }
