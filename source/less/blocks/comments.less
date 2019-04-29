@@ -35,7 +35,17 @@
     width: 768px;
     .center-block();
     .title-align(85px, 50px);
-  }
+
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/review@2x.jpg");
+          background-size: 350px 457px;
+        }
+    }
+
 
   .comments__centered {
     display: flex;

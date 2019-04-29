@@ -1,4 +1,8 @@
 .categories {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+.categories__list {
   .list-style();
   width: 320px;
   .center-block();
@@ -31,7 +35,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .categories {
+  .categories__list {
     display: flex;
     width: 670px;
     .center-block();
@@ -48,7 +52,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .categories {
+  .categories__list {
     width: 1050px;
   }
 }
