@@ -179,12 +179,14 @@
             </tr>
           </table>
         </div>
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="наш адрес на карте" width="322" height="457">
-        </picture>
-        <button class="contacts__button site-button" type="button" name="write-us">напишите нам</button>
+        <a href="https://goo.gl/maps/2vvJ5Wohmty">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="наш адрес на карте" width="322" height="457">
+          </picture>
+        </a>
+        <a class="contacts__button site-button" href="feedback-form.html" >напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -205,11 +207,45 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="htmlacademy.ru">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="34"> </a>
         </div>
       </div>
     </footer>
+    <section class="modal-box cart">
+      <div class="modal-box__window">
+        <div class="modal-box__container">
+          <h2 class="modal-box__heading">Добавить в корзину</h2>
+          <p class="modal-box__text">Выберите размер:</p>
+          <form class="modal-box__form" action="index.html" method="get">
+            <ul class="modal-box__size-list">
+              <li class="modal-box__size-item">
+                <input id="S" type="radio" name="size" checked>
+                <label class="modal-box__size" for="S">S
+                </label>
+              </li>
+              <li class="modal-box__size-item">
+                <input id="M" type="radio" name="size">
+                <label class="modal-box__size" for="M">M
+                </label>
+              </li>
+              <li class="modal-box__size-item">
+                <input id="L" type="radio" name="size">
+                <label class="modal-box__size" for="L">L
+                </label>
+              </li>
+            </ul>
+            <button class="modal-box__button site-button" type="button" name="write-us">добавить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-box modal-box--map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1552913267843" width="940" height="447" allowfullscreen></iframe>
+      <img src="img/map-popup.jpg" width="940" height="447" alt="Адрес компании: г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8">
+    </section>
     <script src="js/scripts.js"></script>
+    <script src="js/modal-box.js"></script>
   </body>
 </html>
