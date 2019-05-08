@@ -28,14 +28,12 @@
         </ul>
         <div class="main-nav__user-options site-list">
           <div class="main-nav__search site-list__item">
-            <form class="site-list__search-form" action="https//echo.htmlacademy.ru" method="get">
-              <label class="site-list__search" for="search">
-                <svg class="site-list__search-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
-                  <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
-                </svg>
-                <input type="search" id="search" placeholder="Поиск по сайту">
-              </label>
-            </form>
+            <a class="site-list__search" href="search.html">
+              <svg class="site-list__search-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                <span>Поиск по сайту</span>
+              </svg>
+            </a>
           </div>
           <div class="main-nav__user site-list__item">
             <a class="site-list__cart" href="cart.html">
@@ -179,12 +177,14 @@
             </tr>
           </table>
         </div>
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="наш адрес на карте" width="322" height="457">
-        </picture>
-        <button class="contacts__button site-button" type="button" name="write-us">напишите нам</button>
+        <a href="https://goo.gl/maps/2vvJ5Wohmty">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="наш адрес на карте" width="322" height="457">
+          </picture>
+        </a>
+        <a class="contacts__button site-button" href="feedback-form.html" >напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -205,11 +205,45 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="htmlacademy.ru">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <img src="img/logo-htmlacademy.svg" alt="htmlacademy" width="27" height="34"> </a>
         </div>
       </div>
     </footer>
+    <section class="modal-box cart">
+      <div class="modal-box__window">
+        <div class="modal-box__container">
+          <h2 class="modal-box__heading">Добавить в корзину</h2>
+          <p class="modal-box__text">Выберите размер:</p>
+          <form class="modal-box__form" action="index.html" method="get">
+            <ul class="modal-box__size-list">
+              <li class="modal-box__size-item">
+                <input id="S" type="radio" name="size" checked>
+                <label class="modal-box__size" for="S">S
+                </label>
+              </li>
+              <li class="modal-box__size-item">
+                <input id="M" type="radio" name="size">
+                <label class="modal-box__size" for="M">M
+                </label>
+              </li>
+              <li class="modal-box__size-item">
+                <input id="L" type="radio" name="size">
+                <label class="modal-box__size" for="L">L
+                </label>
+              </li>
+            </ul>
+            <button class="modal-box__button site-button" type="button" name="write-us">добавить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal-box modal-box--map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5978266653062!2d30.321297716096982!3d59.93881538187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310e354288bb%3A0xbbeecda9980bbc58!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1552913267843" width="940" height="447" allowfullscreen></iframe>
+      <img src="img/map-popup.jpg" width="940" height="447" alt="Адрес компании: г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8">
+    </section>
     <script src="js/scripts.js"></script>
+    <script src="js/modal-box.js"></script>
   </body>
 </html>
