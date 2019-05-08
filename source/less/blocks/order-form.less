@@ -17,7 +17,6 @@
   .title-align(0, 30px);
 }
 
-/*внутр. отступы у fieldset*/
 .order-form__radio,
 .order-form__checkbox,
 .order-form__initials {
@@ -39,7 +38,6 @@
   .title-align(10px, 10px);
 }
 
-/*ширина текстовых инпутов*/
 .order-form__initials input,
 .order-form__tel input,
 .order-form__email input,
@@ -59,7 +57,7 @@
   margin-bottom: 55px;
 }
 
-@media (min-width:@tablet-width) {
+@media (min-width: @tablet-width) {
   .order-form {
     width: 768px;
   }
@@ -72,8 +70,6 @@
     .title-align(0, 55px);
   }
 
-
-  /*внутр. отступы у fieldset*/
   .order-form__radio,
   .order-form__checkbox,
   .order-form__initials,
@@ -85,47 +81,35 @@
   .order-form__tel {
     .title-align(50px, 25px);
     .section-align(50px, 50px);
-
   }
 
   .order-form__email {
     .title-align(0, 50px);
     .section-align(50px, 50px);
-
   }
 
-  /*серый фон*/
   .order-form__checkbox,
   .order-form__tel,
   .order-form__email {
     background-color: @grey;
   }
 
-  /*позиционирование legend*/
   .order-form__title {
     float: left;
-    /*display: block;
-    padding: 0;
-    padding-top: 20px;
-    margin: 0;
-    margin-bottom: -20px;*/
   }
 
-/*отступ слева для блоков с полями*/
   .order-form__list,
   .order-form__wrapper {
     .section-align(167px, 0);
     width: 500px;
   }
 
-  /*флекс для чекбокса*/
   .order-form__checkbox ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
 
-  /*вытягиваем ширину инпута на всю строку*/
   .order-form__initials .order-form__item {
     display: flex;
     align-items: baseline;
@@ -153,7 +137,7 @@
   }
 }
 
-@media (min-width:@desktop-width) {
+@media (min-width: @desktop-width) {
   .order-form {
     width: 1200px;
   }
@@ -163,7 +147,6 @@
     padding-left: 75px;
   }
 
-  /*внутр. отступы у fieldset*/
   .order-form__radio,
   .order-form__checkbox,
   .order-form__initials,
@@ -181,15 +164,14 @@
     .section-align(110px, 110px);
   }
 
-  /*отступ слева для блоков с полями*/
-    .order-form__list,
-    .order-form__wrapper {
-    .section-align(175px, 0);
+  .order-form__list,
+  .order-form__wrapper {
+  .section-align(175px, 0);
     width: 750px;
-    }
+  }
 
-    .order-form__item.fieldset__initials,
-    .order-form__wrapper {
-      width: 700px;
-    }
+  .order-form__item.fieldset__initials,
+  .order-form__wrapper {
+    width: 700px;
+  }
 }
