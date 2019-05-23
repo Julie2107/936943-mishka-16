@@ -10,38 +10,42 @@
 }
 
 .categories__item a {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   .link-style();
-  .title-align();
+  .title-align(25px, 16px);
   .section-align();
   .font(19px, 700, 24px);
   color: white;
   cursor: pointer;
+
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.categories__item svg {
+  width: 62px;
+  height: 62px;
+  opacity: 0.5;
+}
+
+.categories__item a:hover ~ .categories__item-icon {
+  opacity: 0.7;
 }
 
 .categories__item--interior {
   background-color: @mint;
-  /*background-image: url("../../img/icon-interior.svg");
-  background-position: 244px 23px;
-  background-repeat: no-repeat;
-  background-size: 40px 62px;*/
 }
 
-.categories__item--interior a:hover {
+.categories__item--interior a:hover{
   background-color: #59d5bc;
   padding-bottom: 35px;
 }
 
-.categories__item--interior a:active {
-  opacity: 0.3;
-}
-
 .categories__item--toys {
   background-color: @mint-dark;
-  /*background-image: url("../../img/icon-toy.svg");
-  background-position: 233px 23px;
-  background-repeat: no-repeat;
-  background-size: 60px 60px;*/
 }
 
 .categories__item--toys a:hover {
@@ -49,15 +53,25 @@
   padding-bottom: 35px;
 }
 
-.categories__item--toys a:active {
-  opacity: 0.3;
-}
-
 @media (min-width: @tablet-width) {
+
   .categories__list {
     display: flex;
     width: 670px;
     .center-block();
+    position: relative;
+  }
+
+  .categories__list::after {
+    content: "";
+    position: absolute;
+    width: 770px;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat;
+    background-size: 770px 24px;
+    bottom: -14px;
+    left: -50px;
   }
 
   .categories__item {
@@ -67,11 +81,20 @@
   .categories__item a {
     .font(20px, 700, 30px);
     color: white;
+    .title-align(28px, 29px);
+    .section-align(35px, auto);
   }
 }
 
 @media (min-width: @desktop-width) {
   .categories__list {
     width: 1050px;
+  }
+
+  .categories__list::after {
+    width: 1150px;
+    height: 34px;
+    background-size: 1150px 34px;
+    bottom: -19px;
   }
 }

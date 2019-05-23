@@ -6,6 +6,7 @@
 .page-footer__social {
   width: 260px;
   text-align: center;
+  vertical-align: middle;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -32,10 +33,20 @@
   .page-footer__social {
     text-align: center;
     border-bottom: none;
+    width: 150px;
   }
 
   .page-footer__logo {
     display: block;
+    margin-right: 45px;
+
+    &:hover .page-footer__logo-icon {
+      fill: #46c1ae;
+    }
+
+    &:active .page-footer__logo-icon {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__copyright {

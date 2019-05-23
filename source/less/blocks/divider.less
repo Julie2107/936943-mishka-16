@@ -1,19 +1,51 @@
 .divider {
-  width: 100%;
+  width: 320px;
+  height: 6px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: 320px 6px;
+  background-position: 0 50%;
+  .center-block();
+  margin-top: 36px;
+  margin-bottom: 27px;
 }
 
-.divider--top-item {
-  .title-align();
+.divider--feedback {
+  margin-top: 45px;
+  margin-bottom: 35px;
 }
 
 @media (min-width: @tablet-width) {
+  .divider {
+    width: 770px;
+    height: 17px;
+    background-size: 770px 17px;
+  }
+
   .divider--top-item {
-    .title-align(50px, 55px);
+    margin-top: 32px;
+    margin-bottom: 46px;
+  }
+
+  .divider--feedback {
+    margin-top: 68px;
+    margin-bottom: 47px;
   }
 }
-
 @media (min-width: @desktop-width) {
+  .divider {
+    width: 1050px;
+    height: 23px;
+    background-size: 1050px 23px;
+  }
+
   .divider--top-item {
-    .title-align(70px, 75px);
+    margin-top: 45px;
+    margin-bottom: 61px;
+  }
+
+  .divider--feedback {
+    margin-top: 60px;
+    margin-bottom: 70px;
   }
 }

@@ -1,5 +1,8 @@
 .site-list {
-  .list-style();
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .site-list__item {
@@ -11,19 +14,15 @@
   display: block;
   .link-style();
   .title-align();
-  padding-left: 76px;
-}
+  padding-left: 80px;
 
-.site-list__item a:hover {
-  opacity: 0.6;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.site-list__item a:hover ~ .site-list__item svg {
-  fill: @mint;
-}
-
-.site-list__item a:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .site-list__search {
@@ -47,14 +46,28 @@
   height: 18px;
 
   opacity: 0.2;
+}
 
-  path {
-    fill: #000000;
-  }
+.site-list__search:hover .site-list__search-icon {
+  fill: @mint;
+  opacity: 1;
+}
+
+.site-list__search:active .site-list__search-icon {
+  opacity: 0.3;
 }
 
 .site-list__cart {
   position: relative;
+
+  &:hover .site-list__cart-icon {
+    fill: @mint;
+    opacity: 1;
+  }
+
+  &:active .site-list__cart-icon {
+    opacity: 0.3;
+  }
 }
 
 .site-list__cart-icon {
@@ -62,23 +75,15 @@
   width: 21px;
   height: 18px;
 
-  top: 32px;
+  top: 35px;
   left: 30px;
-
-  path {
-    opacity: 0.2;
-  }
+  opacity: 0.2;
 }
+
 
 @media (min-width: @tablet-width) {
   .site-list__item {
     border: 0;
-  }
-
-  .site-list__item.main-nav__search {
-    border: 1px solid #ececec;
-    border-top: 0;
-    border-bottom: 0;
   }
 
   .site-list__item .site-list__search {
@@ -87,18 +92,26 @@
 
   .site-list__search-icon {
     position: static;
-    .title-align();
-    .section-align();
+    .title-align(36px, 33px);
+    .section-align(32px, 34px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .site-list__search {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
 
   .site-list__item--small a {
     .font(15px, 700, 24px);
     padding: 0;
-    padding-top: 20px;
+    padding-top: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
+
   .site-list__item--small a {
     .font(17px, 700, 24px);
     .title-align(30px, 30px);
@@ -109,14 +122,32 @@
     padding-right: 35px;
   }
 
+  .site-list__item--small:last-child {
+    padding-left: 35px;
+  }
+
   .site-list__item--add a {
     .font(15px, 700, 24px);
     padding: 0;
-    padding-top: 20px;
+    padding-top: 17px;
     margin: 0;
   }
 
-  .site-list__item--add:last-child a {
-    padding-right: 60px;
+  .site-list__search-icon {
+    padding-bottom: 28px;
+    border: none;
+  }
+
+  .site-list__search {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  .site-list__cart-icon {
+    padding-bottom: 28px;
+  }
+
+  .site-list__item--add {
+    margin-right: 30px;
   }
 }

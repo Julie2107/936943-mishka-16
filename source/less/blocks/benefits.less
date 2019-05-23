@@ -1,5 +1,5 @@
 .benefits {
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .benefits__list {
@@ -10,79 +10,90 @@
   display: block;
   box-sizing: border-box;
   .font(17px, 700, 20px);
-  .title-align(80px, 0);
+  .title-align(84px, 0);
 }
 
 .benefits__item--eco {
   background-image: url("../img/icon-feature-flower.svg");
   background-repeat: no-repeat;
-  background-position: left 35px;
+  background-position: 7px 31px;
   background-size: 32px 37px;
 }
 
 .benefits__item--ska {
   background-image: url("../img/icon-feature-money.svg");
   background-repeat: no-repeat;
-  background-position: left 35px;
+  background-position: left 32px;
   background-size: 47px 27px;
 }
 
 .benefits__item--likes {
   background-image: url("../img/icon-feature-heart.svg");
   background-repeat: no-repeat;
-  background-position: left 35px;
+  background-position: 7px 35px;
   background-size: 34px 27px;
 }
 
 .benefits__item--love {
   background-image: url("../img/icon-feature-ball.svg");
   background-repeat: no-repeat;
-  background-position: left 35px;
+  background-position: 3px 32px;
   background-size: 35px 34px;
 }
 
 .benefits__item--patriot {
   background-image: url("../img/icon-feature-rocket.svg");
   background-repeat: no-repeat;
-  background-position: left 35px;
+  background-position: left 33px;
   background-size: 55px 23px;
 }
 
 .benefits__item--gift {
   background-image: url("../img/icon-feature-gift.svg");
   background-repeat: no-repeat;
-  background-position: left 35px;
+  background-position: 2px 32px;
   background-size: 33px 32px;
 }
 
 @media (min-width: @tablet-width) {
   .benefits {
-    margin-bottom: 80px;
+    margin-bottom: 85px;
   }
 
   .benefits__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .benefits__item {
     .font(20px, 700, 22px);
-    .title-align(80px, 0);
+    .title-align(110px, 0);
+    background-position: 3px 55px;
   }
 
   .benefits__list {
-    padding-right: 40px;
     box-sizing: border-box;
+    margin-top: -6px;
+  }
+
+  .benefits__list--left {
+    margin-right: 100px;
+    width: 235px;
+  }
+
+  .benefits__list--right {
+    width: 295px;
+    margin-right: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .benefits {
     width: 700px;
-    margin-bottom: 85px;
+    margin-bottom: 90px;
   }
 
-  .benefits__list {
-    padding-right: 55px;
+  .benefits__list--left {
+    margin-right: 114px;
   }
 }

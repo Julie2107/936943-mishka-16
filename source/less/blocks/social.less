@@ -3,9 +3,33 @@
   .center-block();
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
   width: 180px;
+  padding-bottom: 20px;
 }
 
 .social__link {
   .link-style();
+
+  &:hover .social__link-icon {
+    fill: #46c1ae;
+  }
+
+  &:active .social__link-icon {
+    opacity: 0.3;
+  }
+}
+
+.social__link-icon {
+  fill: #221f1f;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    padding-bottom: 0;
+    margin: 0;
+    width: 180px;
+    align-items: center;
+    margin-top: 10px;
+  }
 }

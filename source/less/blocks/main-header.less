@@ -5,15 +5,15 @@
 }
 
 .main-header__title {
-  .title-align(75px, 75px);
+  .title-align(70px, 73px);
   .font(27px, 700, 30px);
-  width: 244px;
+  width: 260px;
   text-align: center;
   margin: auto;
 }
 
 .main-header__title--index {
-  .title-align(76px, 120px);
+  .title-align(70px, 122px);
 }
 
 .main-header--index {
@@ -30,13 +30,34 @@
 
 @media (min-width: @tablet-width) {
   .main-header__title {
-    .title-align(100px, 65px);
+    .title-align(97px, 75px);
     width: 500px;
     .font(43px, 700, 50px);
   }
 
+  .main-header {
+    position: relative;
+  }
+
+  .main-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 24px;
+    bottom: -14px;
+    left: 0;
+  }
+
+  .main-header.main-header--index::after {
+    display: none;
+  }
+
   .main-header__title--index {
-    .title-align(155px, 365px);
+    .title-align(155px, 370px);
   }
 
   .main-header--index {
@@ -55,11 +76,17 @@
   .main-header__title {
     width: 620px;
     .font(53px, 700, 57px);
-    .title-align(100px, 80px);
+    .title-align(93px, 100px);
+  }
+
+  .main-header::after {
+    height: 34px;
+    background-size: 1150px 34px;
+    bottom: -19px;
   }
 
   .main-header__title--index {
-    .title-align(160px, 350px);
+    .title-align(153px, 360px);
   }
 
   .main-header--index {
