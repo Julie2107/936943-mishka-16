@@ -6,36 +6,39 @@
 .order-form__text {
   .font(13px, 400, 24px);
   color: @text;
-  padding-bottom: 30px;
+  padding-bottom: 23px;
+  margin-top: 22px;
 }
 
 .order-form__list {
   .list-style();
 }
 
-.order-form__item:not(:last-child) {
-  .title-align(0, 30px);
+.order-form__radio,
+.order-form__checkbox {
+  margin: 0;
+  .section-align(0, 0);
+  .title-align(35px, 43px);
 }
 
-.order-form__radio,
-.order-form__checkbox,
 .order-form__initials {
   margin: 0;
   .section-align(0, 0);
-  .title-align(30px, 30px);
+  padding-top: 23px;
+  .title-align(23px, 32px);
 }
 
 .order-form__tel,
 .order-form__email {
   margin: 0;
   .section-align(0, 0);
-  .title-align(10px, 30px);
+  .title-align(10px, 32px);
 }
 
 .order-form__wishes {
   margin: 0;
   .section-align(0, 0);
-  .title-align(10px, 10px);
+  .title-align(10px, 8px);
 }
 
 .order-form__initials input,
@@ -43,6 +46,23 @@
 .order-form__email input,
 .order-form__wishes textarea {
   min-width: 260px;
+}
+
+.order-form__wishes textarea:focus {
+  color: @text;
+  opacity: 1;
+}
+
+.order-form__wrapper {
+  position: relative;
+}
+
+.order-form__wrapper-icon {
+  position: absolute;
+  right: 4px;
+  top: 8px;
+  opacity: 0.2;
+  width: 32px;
 }
 
 .order-form__note {
@@ -64,28 +84,59 @@
 
   .order-form__text {
     .font(17px, 400, 30px);
-  }
-
-  .order-form__item:not(:last-child) {
-    .title-align(0, 55px);
+    margin-top: 75px;
+    padding-bottom: 5px;
   }
 
   .order-form__radio,
   .order-form__checkbox,
-  .order-form__initials,
+  .order-form__initials {
+    .title-align(67px, 68px);
+    .section-align(50px, 48px);
+  }
+
+  .order-form__checkbox {
+    padding-bottom: 8px;
+  }
+
+  .order-form__initials {
+    padding-bottom: 50px;
+  }
+
   .order-form__wishes {
-    .title-align(50px, 50px);
-    .section-align(50px, 50px);
+    .title-align(50px, 45px);
+    .section-align(50px, 48px);
   }
 
   .order-form__tel {
-    .title-align(50px, 25px);
+    .title-align(60px, 32px);
     .section-align(50px, 50px);
+  }
+
+  .order-form__tel legend,
+  .order-form__email legend,
+  .order-form__wishes legend {
+    padding-top: 10px;
+  }
+
+  .order-form__wishes legend {
+    padding-top: 20px;
+  }
+
+  .order-form__tel input,
+  .order-form__email input {
+    padding-left: 10px;
+    box-sizing: border-box;
   }
 
   .order-form__email {
     .title-align(0, 50px);
     .section-align(50px, 50px);
+  }
+
+  .order-form__wrapper-icon {
+    right: 20px;
+    top: 0;
   }
 
   .order-form__checkbox,
@@ -98,7 +149,6 @@
     float: left;
   }
 
-  .order-form__list,
   .order-form__wrapper {
     .section-align(167px, 0);
     width: 500px;
@@ -107,7 +157,8 @@
   .order-form__checkbox ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-content: flex-start;
   }
 
   .order-form__initials .order-form__item {
@@ -129,6 +180,8 @@
     .font(17px, 400, 30px);
     margin-bottom: 0;
     float: right;
+    margin-right: 50px;
+    margin-top: 7px;
   }
 
   .order-form__button {
@@ -139,39 +192,60 @@
 
 @media (min-width: @desktop-width) {
   .order-form {
-    width: 1200px;
+    width: 1150px;
   }
 
   .order-form__text {
     width: 700px;
-    padding-left: 75px;
+    margin-top: 125px;
   }
 
   .order-form__radio,
   .order-form__checkbox,
   .order-form__initials,
-  .order-form__wishes {
-    .section-align(110px, 110px);
+  .order-form__wishes,
+  .order-form__tel,
+  .order-form__email {
+    .section-align(110px, 0);
   }
 
   .order-form__tel {
-    .title-align(50px, 25px);
-    .section-align(110px, 110px);
+    .title-align(60px, 25px);
   }
 
   .order-form__email {
-    .title-align(0, 50px);
-    .section-align(110px, 110px);
+    .title-align(7px, 50px);
   }
 
-  .order-form__list,
   .order-form__wrapper {
-    .section-align(175px, 0);
+    .section-align(115px, 0);
+    width: 700px;
+  }
+
+  .order-form__checkbox .order-form__wrapper {
     width: 750px;
   }
 
-  .order-form__item.fieldset__initials,
-  .order-form__wrapper {
-    width: 700px;
+  .order-form__tel input,
+  .order-form__email input {
+    padding-left: 15px;
+  }
+
+  .order-form__wrapper-icon {
+    right: 2px;
+    top: 2px;
+  }
+
+  .order-form__wishes {
+    padding-bottom: 40px;
+  }
+
+  .order-form__note {
+    margin-right: 225px;
+    margin-top: 10px;
+  }
+
+  .order-form__button {
+    margin-left: 225px;
   }
 }

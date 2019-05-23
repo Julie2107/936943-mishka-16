@@ -4,22 +4,23 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .contacts__header {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 .contacts__text {
   .font(15px, 400, 30px);
   color: @text;
   width: 260px;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
 }
 
 .contacts__cell-title {
-  width: 76px;
+  min-width: 76px;
+  padding-bottom: 28px;
 }
 
 .contacts__text td {
@@ -32,15 +33,15 @@
 
 .contacts__email a {
   border-bottom: 1px solid @mint;
-}
 
-.contacts__email a:hover {
-  border-bottom: none;
-  color: #46c1ae;
-}
+  &:hover {
+    border-bottom: none;
+    color: #46c1ae;
+  }
 
-.contacts__email a:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__adress {
@@ -51,37 +52,59 @@
   background-color: @grey;
   .center-block();
   margin-bottom: 40px;
+  width: 322px;
+  height: 457px;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__button {
+  width: 260px;
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
+    width: 768px;
+    .center-block();
     margin-bottom: 57px;
+    background-position: 670px top;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
   }
 
   .contacts__header {
-    margin-bottom: 50px;
+    padding-top: 15px;
+    margin-bottom: 44px;
   }
 
   .contacts__text {
     width: 670px;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 
   .contacts__text tbody {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     .font(17px, 400, 30px);
   }
 
+  .contacts__email {
+    margin-right: 42px;
+  }
+
   .contacts__map {
     width: 768px;
-    height: 430px;
+    height: 457px;
     margin-bottom: 55px;
   }
 
   .contacts__button {
-    margin-bottom: 55px;
+    width: 230px;
+    margin-bottom: 0;
   }
 }
 
@@ -91,12 +114,16 @@
     width: 875px;
     .section-align(175px, 0);
     .center-block();
-    margin-bottom: 50px;
+    margin-bottom: 104px;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: 63px 63px;
   }
 
   .contacts__wrapper {
     width: auto;
     margin: 0;
+    background: none;
   }
 
   .contacts__text {

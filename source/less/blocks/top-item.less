@@ -3,20 +3,21 @@
 }
 
 .top-item__header {
-  .title-align(30px, 30px);
+  .title-align(27px, 17px);
 }
 
 .top-item__subheader {
   .font(17px, 700, 20px);
   color: @mint;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .top-item__text {
   .font(15px, 400, 24px);
   color: @text;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .top-item__table {
@@ -24,16 +25,19 @@
   vertical-align: middle;
   .font(15px, 400, 24px);
   color: @text;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .top-item__table td {
   border-bottom: 1px solid #ececec;
-  .title-align(6px, 8px);
+  .title-align(6px, 7px);
+  .section-align(0, 0);
+  min-width: 80px;
 }
 
 .top-item__image {
   background-color: @grey;
+  margin-bottom: 16px;
 }
 
 .top-item__price {
@@ -53,12 +57,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .title-align(50px, 50px);
+    .title-align(46px, 50px);
   }
 
   .top-item__subheader {
     width: 70px;
     .font(17px, 700, 17px);
+    padding-right: 30px;
+    padding-top: 5px;
   }
 
   .top-item__content {
@@ -72,7 +78,8 @@
   .top-item__image {
     width: 333px;
     height: 404px;
-    margin-left: 44px;
+    margin-left: 42px;
+    margin-top: 5px;
   }
 
   .top-item__desc {
@@ -80,19 +87,19 @@
   }
 
   .top-item__order {
-    margin-top: -100px;
+    margin-top: -133px;
   }
 
   .top-item__text {
     .font(17px, 400, 30px);
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 
   .top-item__price {
     .font(20px, 700, 24px);
     color: @text;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 
   .top-item__button {
@@ -108,6 +115,8 @@
   .top-item__header {
     flex-direction: row-reverse;
     justify-content: flex-end;
+    margin-top: 77px;
+    padding-bottom: 48px;
   }
 
   .top-item__title {
@@ -122,17 +131,27 @@
     .section-align(175px, 0);
   }
 
+  .top-item__table td {
+    .title-align(4px, 13px);
+    min-width: 50px;
+  }
+
   .top-item__text {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .top-item__image {
     width: 525px;
     height: 636px;
-    margin-top: -160px;
+    margin-top: -157px;
   }
 
   .top-item__table {
     .font(15px, 400, 20px);
+    width: 290px;
+  }
+
+  .top-item__order {
+    margin-top: -136px;
   }
 }

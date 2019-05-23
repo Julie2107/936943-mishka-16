@@ -1,0 +1,39 @@
+.slider__item {
+  display: none;
+}
+
+.slider__item--active {
+  display: block;
+}
+
+.slider__toggle {
+  width: 130px;
+  height: 52px;
+  border: 1px solid #ececec;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.slider__toggle--left {
+  border-right: none;
+  margin-right: -5px;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__toggle {
+    border: none;
+    width: 86px;
+    height: 26px;
+  }
+}
