@@ -88,17 +88,18 @@ gulp.task("html", function (){
 
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
+    "source/fonts/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
+    "source/css/normalize.css"
   ], {
     base: "source"
   })
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("clean", function (){
-  return del("build")
+gulp.task("clean", function () {
+  return del("build");
 });
 
 gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));

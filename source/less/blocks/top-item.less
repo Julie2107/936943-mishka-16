@@ -13,6 +13,16 @@
   text-align: center;
 }
 
+.top-item__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.top-item__desc {
+  order: -1;
+}
+
 .top-item__text {
   .font(15px, 400, 24px);
   color: @text;
@@ -23,14 +33,15 @@
 .top-item__table {
   width: 260px;
   vertical-align: middle;
-  .font(15px, 400, 24px);
+  .font(15px, 400, 20px);
   color: @text;
   margin-bottom: 27px;
 }
 
 .top-item__table td {
+  border-left-width: -2px;
   border-bottom: 1px solid #ececec;
-  .title-align(6px, 7px);
+  .title-align(8px, 9px);
   .section-align(0, 0);
   min-width: 80px;
 }
@@ -52,12 +63,17 @@
   flex-direction: column;
 }
 
+.top-item__button {
+  .font(17px, 700, 20px);
+  width: 260px;
+}
+
 @media (min-width: @tablet-width) {
   .top-item__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .title-align(46px, 50px);
+    .title-align(47px, 50px);
   }
 
   .top-item__subheader {
@@ -68,32 +84,36 @@
   }
 
   .top-item__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: space-between;
+    display: block;
     box-sizing: content-box;
   }
 
   .top-item__image {
+    float: right;
     width: 333px;
     height: 404px;
     margin-left: 42px;
-    margin-top: 5px;
+    margin-top: 7px;
+    margin-right: 2px;
   }
 
   .top-item__desc {
     width: 290px;
   }
 
-  .top-item__order {
-    margin-top: -133px;
-  }
-
   .top-item__text {
     .font(17px, 400, 30px);
     margin: 0;
-    margin-bottom: 34px;
+    margin-bottom: 35px;
+  }
+
+  .top-item__table {
+    width: 290px;
+    margin-bottom: 54px;
+  }
+
+  .top-item__table td:first-child {
+    width: 95px;
   }
 
   .top-item__price {
@@ -143,15 +163,21 @@
   .top-item__image {
     width: 525px;
     height: 636px;
-    margin-top: -157px;
+    margin-top: -158px;
+    margin-right: 0;
   }
 
   .top-item__table {
     .font(15px, 400, 20px);
     width: 290px;
+    margin-bottom: 105px;
   }
 
+  .top-item__price {
+    margin-right: 15px;
+  }
+/*
   .top-item__order {
     margin-top: -136px;
-  }
+  }*/
 }

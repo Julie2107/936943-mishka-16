@@ -19,16 +19,18 @@
 }
 
 .contacts__cell-title {
-  min-width: 76px;
+  min-width: 72px;
   padding-bottom: 28px;
 }
 
 .contacts__text td {
   vertical-align: top;
+  padding-left: 0;
 }
 
 .contacts__text a {
   .link-style();
+  color: @text;
 }
 
 .contacts__email a {
@@ -69,8 +71,8 @@
   .contacts {
     width: 768px;
     .center-block();
-    margin-bottom: 57px;
-    background-position: 670px top;
+    margin-bottom: 56px;
+    background-position: 668px top;
     background-image: url("../img/icon-flag.svg");
     background-repeat: no-repeat;
   }
@@ -93,7 +95,7 @@
   }
 
   .contacts__email {
-    margin-right: 42px;
+    margin-right: 46px;
   }
 
   .contacts__map {
@@ -112,18 +114,21 @@
   .contacts {
     flex-direction: row;
     width: 875px;
-    .section-align(175px, 0);
+    .section-align(170px, 0);
     .center-block();
     margin-bottom: 104px;
-    background-image: url("../img/icon-flag.svg");
-    background-repeat: no-repeat;
-    background-position: 63px 63px;
+    background-position: 60px 63px;
   }
 
   .contacts__wrapper {
     width: auto;
     margin: 0;
     background: none;
+  }
+
+  .contacts__header {
+    padding-top: 0;
+    margin-bottom: 44px;
   }
 
   .contacts__text {

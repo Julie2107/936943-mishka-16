@@ -80,6 +80,12 @@
     left: 0;
     background: url("../img/icon-video.svg") no-repeat 0 0;
   }
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 1;
+  }
 }
 
 .shop-box__desc {
@@ -123,10 +129,12 @@
 
 .shop-box__price {
   .font(15px, 700, 24px);
+  color: #000000;
 }
 
 .shop-box__button {
   width: 100%;
+  .font(17px, 700, 16px);
 }
 
 .shop-box__buy-icon {
@@ -170,11 +178,13 @@
     padding-top: 25px;
     padding-left: 26px;
     padding-bottom: 23px;
+    padding-right: 32px;
   }
 
   .shop-box__name {
     .font(20px, 700, 24px);
     display: block;
+    padding-right: 36px;
   }
 
   .shop-box__desc {
@@ -225,8 +235,9 @@
 @media (min-width: @desktop-width) {
   .shop-box {
     width: 316px;
-    max-height: 760px;
+    /*max-height: 760px;*/
     margin-bottom: 57px;
+    align-items: flex-start;
   }
 
   .shop-box__image {
@@ -241,15 +252,20 @@
     padding-top: 15px;
     padding-bottom: 23px;
     margin-top: 10px;
-    /*justify-content: flex-start;*/
+  }
+
+  .shop-box__name {
+    padding-right: 0;
   }
 
   .shop-box__shop {
-    padding-top: 20px;
+    padding-top: 18px;
+    margin-left: 0;
   }
 
   .shop-box__content {
-    padding-bottom: 6px;
+    padding-bottom: 26px;
+    margin-bottom: 0;
   }
 
   .shop-box--video {
@@ -264,8 +280,9 @@
     width: 230px;
     padding: 0;
     margin: 0;
-    margin-top: -268px;
+    margin-top: 20px;
     margin-right: 60px;
+    transform: translateY(-278px);
   }
 
   .shop-box__videowrap {
@@ -284,7 +301,8 @@
     padding-left: 0;
     padding-top: 50px;
     margin-top: 45px;
-    margin-right: auto;
+    margin-right: 86px;
+    margin-bottom: 20px;
   }
 
   .shop-box__desc--video {

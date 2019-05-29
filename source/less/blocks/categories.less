@@ -12,12 +12,14 @@
 .categories__item a {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   .link-style();
-  .title-align(25px, 16px);
-  .section-align();
+  .title-align(23px, 18px);
+  .section-align(30px, 27px);
   .font(19px, 700, 24px);
   color: white;
   cursor: pointer;
+  box-sizing: border-box;
 
 
   &:active {
@@ -41,7 +43,7 @@
 
 .categories__item--interior a:hover {
   background-color: #59d5bc;
-  padding-bottom: 35px;
+  transform: scaleY(1.04);
 }
 
 .categories__item--toys {
@@ -50,7 +52,7 @@
 
 .categories__item--toys a:hover {
   background-color: #46c1ae;
-  padding-bottom: 35px;
+  transform: scaleY(1.04);
 }
 
 @media (min-width: @tablet-width) {
@@ -80,8 +82,12 @@
   .categories__item a {
     .font(20px, 700, 30px);
     color: white;
-    .title-align(28px, 29px);
-    .section-align(35px, auto);
+    .title-align(29px, 27px);
+    .section-align(36px, 25px);
+  }
+
+  .categories__item--toys a {
+    padding-right: 35px;
   }
 }
 
