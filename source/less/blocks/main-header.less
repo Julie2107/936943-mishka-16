@@ -2,6 +2,7 @@
   min-height: 177px;
   background-color: @grey;
   text-align: center;
+  width: 100%;
 }
 
 .main-header__title {
@@ -39,6 +40,7 @@
   }
 
   .main-header {
+    width: 100%;
     position: relative;
   }
 
@@ -49,14 +51,15 @@
     height: 24px;
     background-image: url("../img/bg-zigzag-fill.svg");
     background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 24px;
+    background-repeat: repeat-x;
+    background-size: 90% 24px;
     bottom: -14px;
     left: 0;
   }
 
   .main-header.main-header--index::after {
-    display: none;
+    bottom: -131px;
+    z-index: 2;
   }
 
   .main-header__title--index {
@@ -85,7 +88,7 @@
 
   .main-header::after {
     height: 34px;
-    background-size: 1150px 34px;
+    background-size: 100% 34px;
     bottom: -19px;
   }
 
@@ -99,5 +102,9 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
+  }
+
+  .main-header.main-header--index::after {
+    bottom: -136px;
   }
 }

@@ -43,7 +43,7 @@
 
 .categories__item--interior a:hover {
   background-color: #59d5bc;
-  transform: scaleY(1.04);
+  transform: translateY(-5px);
 }
 
 .categories__item--toys {
@@ -52,7 +52,7 @@
 
 .categories__item--toys a:hover {
   background-color: #46c1ae;
-  transform: scaleY(1.04);
+  transform: translateY(-5px);
 }
 
 @media (min-width: @tablet-width) {
@@ -61,18 +61,6 @@
     width: 670px;
     .center-block();
     position: relative;
-  }
-
-  .categories__list::after {
-    content: "";
-    position: absolute;
-    width: 770px;
-    height: 24px;
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: repeat;
-    background-size: 770px 24px;
-    bottom: -14px;
-    left: -50px;
   }
 
   .categories__item {

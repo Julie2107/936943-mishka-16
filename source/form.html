@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="css/style-min.css" as="style">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
@@ -149,7 +151,7 @@
           <legend class="order-form__title fieldset__legend">E-MAIL</legend>
           <div class="order-form__wrapper">
             <label class="visually-hidden" for="email-field">ваш электронный адрес</label>
-            <input type="email" id="email-field" name="email" placeholder="Ваш email*" required="">
+            <input type="email" id="email-field" name="email" placeholder="Ваш Email*" required="">
             <svg class="order-form__wrapper-icon" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32">
               <use xlink:href="#icon-mail"></use>
             </svg>
