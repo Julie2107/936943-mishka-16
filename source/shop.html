@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="preload" href="css/style-min.css" as="style">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
@@ -142,7 +144,6 @@
           </li>
         </ul>
         <div class="shop-box shop-box--video">
-          <h2 class="shop-box__name shop-box__name--video">Процесс производства</h2>
           <div class="shop-box__videowrap">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
@@ -156,6 +157,7 @@
               <use xlink:href="#icon-play"></use>
             </svg>
           </div>
+          <h2 class="shop-box__name shop-box__name--video">Процесс производства</h2>
           <div class="shop-box__cont shop-box__cont--video">
             <p class="shop-box__desc shop-box__desc--video">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
             <button class="shop-box__button site-button site-button--video" type="button" name="order-button">Сделать заказ</button>
